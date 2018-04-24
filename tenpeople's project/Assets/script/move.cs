@@ -57,10 +57,11 @@ public class move : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if (collision.gameObject.tag == "left")
+        if (collision.gameObject.tag == "up")
         {
-            A = 0;
+			directions = 0;
         } 
+<<<<<<< HEAD
         if (collision.gameObject.tag == "right")
         {
             A = 2;
@@ -73,5 +74,20 @@ public class move : MonoBehaviour {
         {
             A = 4;
         }
+=======
+		if (collision.gameObject.tag == "down")
+		{
+			directions = 1;
+		} 
+		if (collision.gameObject.tag == "left")
+		{
+			directions = 2;
+		} 
+		if (collision.gameObject.tag == "right")
+		{
+			directions = 3;
+		} 
+
+>>>>>>> d3f962d03286570632af7d9638b755f2441d1d56
     }
 }
