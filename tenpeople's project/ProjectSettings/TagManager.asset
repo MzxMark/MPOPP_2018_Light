@@ -9,6 +9,9 @@ TagManager:
   - turn
   - light
   - trigger
+  - right
+  - up
+  - down
   layers:
   - Default
   - TransparentFX
