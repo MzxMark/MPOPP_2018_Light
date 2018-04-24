@@ -1,0 +1,13 @@
+[
+  {
+    "id":0,
+    "name": "door",
+    "value": 5
+  },
+
+  {
+	"id":1,
+    "name": "clock",
+    "value": 3
+  }
+]

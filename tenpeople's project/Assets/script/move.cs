@@ -14,14 +14,27 @@ public class move : MonoBehaviour {
         float time = Time.time;
         tempTime = time;
     }
-	
+	public int directions;
 	// Update is called once per frame
 	void Update ()
     {
         float time = Time.time;
         if ((time - tempTime > preparetime) && (A==1))
         {
-            gameObject.transform.Translate(Vector2.up * 3 * Time.deltaTime);
+			switch (directions) {
+			case 0:
+				gameObject.transform.Translate (Vector2.up * 3 * Time.deltaTime);
+				break;
+			case 1:
+				gameObject.transform.Translate (Vector2.down * 3 * Time.deltaTime);
+				break;
+			case 2:
+				gameObject.transform.Translate (Vector2.left * 3 * Time.deltaTime);
+				break;
+			default:
+				gameObject.transform.Translate (Vector2.right * 3 * Time.deltaTime);
+				break;
+			}
         }
         if (A == 0)
         {
