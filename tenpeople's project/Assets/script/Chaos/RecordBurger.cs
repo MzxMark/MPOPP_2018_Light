@@ -22,18 +22,8 @@ public class RecordBurger : MonoBehaviour
 		}
 	}
 
-	[SerializeField]
-	float record;
-	float record1;
-	float record2;
-	float record3;
-	float record4;
-	float record5;
-	float record6;
-	float record7;
-	float record8;
-	float time = 120;
-	float second=0;
+
+	float time = 15;
 
 	[SerializeField]
 	Text text;
@@ -45,12 +35,6 @@ public class RecordBurger : MonoBehaviour
 		get { return Instance1.time;}
 		set { Instance1.time = value; 
 			print (Instance1.time);}
-	}
-	public static float Second
-	{
-		get { return Instance1.second;}
-		set { Instance1.second = value; 
-			print (Instance1.second);}
 	}
 
 	// Use this for initialization
@@ -64,65 +48,8 @@ public class RecordBurger : MonoBehaviour
 			yield return new WaitForSeconds (1);
 			print(Instance1.time);
 			Instance1.time--;
-			if (RecordBurger.Time == 0) {
-				Application.LoadLevel (1);
-			}
-		}
-	}
 
-	public static float Record
-	{
-		get { return Instance1.record; }
-		set { Instance1.record = value; 
-			print (Instance1.record);}
-	}
-	public static float Record1
-	{
-		get { return Instance1.record1; }
-		set { Instance1.record1 = value; 
-			print (Instance1.record1);}
-	}
-	public static float Record2
-	{
-		get { return Instance1.record2; }
-		set { Instance1.record2 = value; 
-			print (Instance1.record2);}
-	}
-	public static float Record3
-	{
-		get { return Instance1.record3; }
-		set { Instance1.record3 = value; 
-			print (Instance1.record3);}
-	}
-	public static float Record4
-	{
-		get { return Instance1.record4; }
-		set { Instance1.record4 = value; 
-			print (Instance1.record4);}
-	}
-	public static float Record5
-	{
-		get { return Instance1.record5; }
-		set { Instance1.record5 = value; 
-			print (Instance1.record5);}
-	}
-	public static float Record6
-	{
-		get { return Instance1.record6; }
-		set { Instance1.record6 = value; 
-			print (Instance1.record6);}
-	}
-	public static float Record7
-	{
-		get { return Instance1.record7; }
-		set { Instance1.record7 = value; 
-			print (Instance1.record7);}
-	}
-	public static float Record8
-	{
-		get { return Instance1.record8; }
-		set { Instance1.record8 = value; 
-			print (Instance1.record8);}
+		}
 	}
 
 }

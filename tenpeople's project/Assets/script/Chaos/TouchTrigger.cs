@@ -124,14 +124,5 @@ public class TouchTrigger : MonoBehaviour
 	public void ChangeLevel5(){
 		ChangeLevel (5);
 	}
-	public void match(){
-		if ((RecordBurger.Record >= match0)||(RecordBurger.Record2>=match2)||(RecordBurger.Record3>=match3)&&(RecordBurger.Record5>0)&&(RecordBurger.Record5>0)&&(RecordBurger.Record8>0)) {
-			Application.LoadLevel (11);
-		}
-		else
-			Application.LoadLevel(12);
-	}
-	public void LightTeach(){
-		RecordBurger.Time=7;
-	}
+
 }
