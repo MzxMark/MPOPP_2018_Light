@@ -39,6 +39,19 @@ public class move : MonoBehaviour {
         if (A == 0)
         {
             gameObject.transform.Translate(Vector2.left * 3 * Time.deltaTime);
+            Debug.Log("1");
+        }
+        if(A ==2 )
+        {
+            gameObject.transform.Translate(Vector2.right * 3 * Time.deltaTime);
+        }
+        if (A == 3)
+        {
+            gameObject.transform.Translate(Vector2.up * 3 * Time.deltaTime);
+        }
+        if (A == 4)
+        {
+            gameObject.transform.Translate(Vector2.down * 3 * Time.deltaTime);
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -48,6 +61,17 @@ public class move : MonoBehaviour {
         {
             A = 0;
         } 
-
+        if (collision.gameObject.tag == "right")
+        {
+            A = 2;
+        }
+        if (collision.gameObject.tag == "up")
+        {
+            A = 3;
+        }
+        if (collision.gameObject.tag == "down")
+        {
+            A = 4;
+        }
     }
 }
