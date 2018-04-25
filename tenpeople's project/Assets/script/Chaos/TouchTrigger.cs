@@ -25,15 +25,6 @@ public class TouchTrigger : MonoBehaviour
 	UnityEvent OnExit;
 	public int levelchoose;
 	bool triggered;
-	float match0=1;
-	float match1=0;
-	float match2=1;
-	float match3=1;
-	float match4=0;
-	float match5=0;
-	float match6=0;
-	float match7=0;
-	float match8=0;
 
 	bool IsTriggerable(Collision2D collision)
 	{
@@ -107,22 +98,6 @@ public class TouchTrigger : MonoBehaviour
 	public void ChangeLevel(int i)
 	{
 		Application.LoadLevel (i);
-	}
-
-	public void ChangeLevel1(){
-		ChangeLevel (1);
-	}
-	public void ChangeLevel2(){
-		ChangeLevel (2);
-	}
-	public void ChangeLevel3(){
-		ChangeLevel (3);
-	}
-	public void ChangeLevel4(){
-		ChangeLevel (4);
-	}
-	public void ChangeLevel5(){
-		ChangeLevel (5);
 	}
 
 }
