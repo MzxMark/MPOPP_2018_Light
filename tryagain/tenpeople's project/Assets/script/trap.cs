@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class trap : MonoBehaviour {
-
+    public GameObject trigger;
 	// Use this for initialization
 	void Start () {
 		
@@ -20,8 +20,8 @@ public class trap : MonoBehaviour {
         if (collision.collider.tag == "light")
         {
 
-            //GameObject.Destroy(this.gameObject);
-            this.gameObject.SetActive(false);
+            GameObject.Destroy(trigger.gameObject);
+          //  trigger.gameObject.SetActive(false);
         }
       
 

@@ -36,4 +36,10 @@ public class UI : MonoBehaviour {
         Esc.enabled = false;
         Time.timeScale = 1;
     }
+    public void NoPress1()
+    {
+        Esc.enabled = false;
+        Time.timeScale = 1;
+        GM.isActive = false;
+    }
 }

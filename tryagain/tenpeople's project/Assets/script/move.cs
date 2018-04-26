@@ -6,10 +6,12 @@ using System.Collections;
 
 public class move : MonoBehaviour {
     private Animator m_animator;
+    public Canvas death;
     // Use this for initialization
     public float preparetime;
     float tempTime = 0f;
     void Start () {
+        death.enabled = false;
         float time = Time.time;
         tempTime = time;
         m_animator = GetComponent<Animator>();
@@ -70,13 +72,11 @@ public class move : MonoBehaviour {
 		if (collision.gameObject.tag == "right")
 		{
 			directions = 3;
-		}        
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.tag == "light")
+		}
+        if (collision.gameObject.tag == "light" )
         {
             GM.isActive = false;
+            death.enabled = true;
         }
     }
 }
