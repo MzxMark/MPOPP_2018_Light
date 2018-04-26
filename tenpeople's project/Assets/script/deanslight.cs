@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class deanslight : MonoBehaviour
 {
-    private float time = 0;
-    private float speed = 3;
+    float time ;
+    public float lightlife;
+    public float speed = 3;
     GameObject clone;
     public GameObject self;
+    
     bool ting = true;
     int A = 1;
 
@@ -20,24 +22,42 @@ public class deanslight : MonoBehaviour
 
     void Update()
     {
-
-        if (A == 1)
+        if (GM.isActive)
         {
-            this.transform.Translate(Vector3.up * speed * Time.deltaTime);
-            if (ting == true)
+            
+            if (time <= lightlife)
             {
-                clone = Instantiate(self, transform.position, transform.rotation);
-            }
 
-        }
-        if (A == 0)
-        {
-            this.transform.Translate(Vector3.right * speed * Time.deltaTime);
-            if (ting == true)
-            {
-                clone = Instantiate(self, transform.position, transform.rotation);
+                if (A == 1)
+                {
+                    this.transform.Translate(Vector3.up * speed * Time.deltaTime);
+                    if (ting == true)
+                    {
+                        clone = Instantiate(self, transform.position, transform.rotation);
+                    }
+
+                }
+                if (A == 0)
+                {
+                    this.transform.Translate(Vector3.right * speed * Time.deltaTime);
+                    if (ting == true)
+                    {
+                        clone = Instantiate(self, transform.position, transform.rotation);
+                    }
+                }
+                if (A == 2)
+                {
+                    this.transform.Translate(Vector3.left * speed * Time.deltaTime);
+                    if (ting == true)
+                    {
+                        clone = Instantiate(self, transform.position, transform.rotation);
+                    }
+                }
+                time = time + Time.deltaTime;
+
             }
         }
+
 
 
 
@@ -53,9 +73,15 @@ public class deanslight : MonoBehaviour
 
 
         }
-        if (collision.collider.tag == "turn")
+        if (collision.collider.tag == "m4")
+
         {
             A = 0;
+        }
+        if (collision.collider.tag == "m3")
+
+        {
+            A = 2;
         }
 
 
