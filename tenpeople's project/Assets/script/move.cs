@@ -61,7 +61,7 @@ public class move : MonoBehaviour {
         {
 			directions = 0;
         } 
-<<<<<<< HEAD
+
         if (collision.gameObject.tag == "right")
         {
             A = 2;
@@ -74,7 +74,7 @@ public class move : MonoBehaviour {
         {
             A = 4;
         }
-=======
+
 		if (collision.gameObject.tag == "down")
 		{
 			directions = 1;
@@ -88,6 +88,6 @@ public class move : MonoBehaviour {
 			directions = 3;
 		} 
 
->>>>>>> d3f962d03286570632af7d9638b755f2441d1d56
+
     }
 }
