@@ -2,16 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class trap : MonoBehaviour {
-    public GameObject trigger;
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-       
+public class trap : MonoBehaviour
+{
+    public GameObject[] triggers;
+    // Use this for initialization
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
 
     }
     void OnCollisionEnter2D(Collision2D collision)
@@ -19,11 +22,14 @@ public class trap : MonoBehaviour {
 
         if (collision.collider.tag == "light")
         {
+            for (int i = 0; i < triggers.Length; i++)
+            {
+                GameObject.Destroy(triggers[i].gameObject);
+            }
 
-            GameObject.Destroy(trigger.gameObject);
-          //  trigger.gameObject.SetActive(false);
+            //  trigger.gameObject.SetActive(false);
         }
-      
+
 
 
     }
