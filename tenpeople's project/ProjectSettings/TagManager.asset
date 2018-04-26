@@ -3,21 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - left
-  - stp
-  - turn
-  - light
-  - trigger
-<<<<<<< HEAD
-  - right
-  - up
-  - down
-=======
-  - up
-  - down
-  - right
->>>>>>> d3f962d03286570632af7d9638b755f2441d1d56
+  tags: []
   layers:
   - Default
   - TransparentFX
