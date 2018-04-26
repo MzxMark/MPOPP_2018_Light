@@ -1347,6 +1347,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2e4f2fc741121bf4f8e5a188739f0a36, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1263955060 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1734430295231758, guid: 7d27547aa24f6534ebae7c804fa86e89,
+    type: 2}
+  m_PrefabInternal: {fileID: 916160954}
 --- !u!1001 &1288476131
 Prefab:
   m_ObjectHideFlags: 0
@@ -1721,7 +1726,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Esc: {fileID: 779496687}
   death: {fileID: 1905376406}
-  yushelight: {fileID: 0}
+  yushelight: {fileID: 1263955060}
 --- !u!1001 &1591022151
 Prefab:
   m_ObjectHideFlags: 0

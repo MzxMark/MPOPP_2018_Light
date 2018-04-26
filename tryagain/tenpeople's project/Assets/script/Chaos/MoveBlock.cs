@@ -1,6 +1,6 @@
 ﻿using UnityEngine; 
-using System.Collections;  
-
+using System.Collections;
+using System;
 public class MoveBlock : MonoBehaviour {
     private bool nm = true;
 	// Use this for initialization  
@@ -30,10 +30,30 @@ public class MoveBlock : MonoBehaviour {
 
                 yield return new WaitForFixedUpdate();
             }
-
+            double x = transform.position.x;
+            Debug.Log("The x1: " + x);
+            double y = transform.position.y;
+            Debug.Log("The y1: " + y);
+            x = Math.Round(x, 0);
+            Debug.Log("The x2: " + x);
+            y = Math.Round(y, 0);
+            Debug.Log("The y2: " + y);
+            x = x + 0.5;
+            y = y + 0.5;
+            transform.position = new Vector3((float)x, (float)y, 0);
         }
 		
 
 
-	}  
+	}
+    public static double Round(double value, int digit)
+    {
+        double vt = Math.Pow(10, digit);
+        //1.乘以倍数 + 0.5
+        double vx = value * vt + 0.4;
+        //2.向下取整
+        double temp = Math.Floor(vx);
+        //3.再除以倍数
+        return (temp / vt);
+    }
 }  
