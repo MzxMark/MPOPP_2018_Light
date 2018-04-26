@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class UI : MonoBehaviour {
     public Canvas Esc;
     public Canvas death;
+    public GameObject yushelight;
     // Use this for initialization
     void Start () {
         Esc.enabled = false;
@@ -26,6 +27,7 @@ public class UI : MonoBehaviour {
     public void paly()
     {
         GM.isActive = true;
+        GameObject.Destroy(yushelight.gameObject);
     }
     public void Quit()
     {
